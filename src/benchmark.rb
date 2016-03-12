@@ -8,7 +8,7 @@ max, min, sum = 0, 0, 0
 # データ計測
 11.times do |i|
   result = Benchmark.measure{
-    require './questions/3.rb'
+    require './questions/6.rb'
   }
   next if i == 0
 
