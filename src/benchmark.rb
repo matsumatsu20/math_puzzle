@@ -20,6 +20,6 @@ max, min, sum = 0, 0, 0
   puts result
 end
 
-p 'MAX: ' + max.to_s
-p 'MIN: ' + min.to_s
-p 'AVG: ' + (sum / 10).to_s
+printf("MAX: %fs\n", max)
+printf("MIN: %fs\n", min)
+printf("AVG: %fs\n", (sum / 10))
