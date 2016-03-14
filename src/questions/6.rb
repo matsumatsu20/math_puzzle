@@ -1,6 +1,8 @@
+$total = 0
+
 class Question3
   def main
-    (1..10000).each do |i|
+    (2..10000).step(2) do |i|
       keisan(i * 3 + 1, i)
     end
   end
@@ -12,7 +14,7 @@ class Question3
       n * 3 + 1
     end
 
-    return true if n == orig_n and p orig_n
+    return true if n == orig_n and $total += 1
     return if n == 1
 
     keisan(n, orig_n)
@@ -21,3 +23,4 @@ end
 
 question = Question3.new
 question.main
+p $total
