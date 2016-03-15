@@ -8,7 +8,7 @@ max, min, sum = 0, 0, 0
 # データ計測
 10.times do |i|
   result = Benchmark.measure{
-    require './questions/6.rb'
+    require './questions/3.rb'
   }
 
   max = result.real > max ? result.real : max
@@ -19,6 +19,6 @@ max, min, sum = 0, 0, 0
   puts result
 end
 
-printf("MAX: %fs\n", max * 1000)
-printf("MIN: %fs\n", min * 1000)
-printf("AVG: %fs\n", (sum / 10) * 1000)
+printf("MAX: %fms\n", max * 1000)
+printf("MIN: %fms\n", min * 1000)
+printf("AVG: %fms\n", (sum / 10) * 1000)
