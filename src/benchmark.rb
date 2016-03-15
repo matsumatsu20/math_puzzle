@@ -6,11 +6,10 @@ puts Benchmark::CAPTION
 max, min, sum = 0, 0, 0
 
 # データ計測
-11.times do |i|
+10.times do |i|
   result = Benchmark.measure{
     require './questions/6.rb'
   }
-  next if i == 0
 
   max = result.real > max ? result.real : max
   min = result.real < min || min == 0 ? result.real : min
@@ -20,6 +19,6 @@ max, min, sum = 0, 0, 0
   puts result
 end
 
-printf("MAX: %fs\n", max)
-printf("MIN: %fs\n", min)
-printf("AVG: %fs\n", (sum / 10))
+printf("MAX: %fs\n", max * 1000)
+printf("MIN: %fs\n", min * 1000)
+printf("AVG: %fs\n", (sum / 10) * 1000)
