@@ -8,7 +8,7 @@ max, min, sum = 0, 0, 0
 # データ計測
 10.times do |i|
   result = Benchmark.measure{
-    require './questions/3.rb'
+    load './questions/3.rb'
   }
 
   max = result.real > max ? result.real : max
