@@ -1,4 +1,4 @@
-# $answer = []
+#$answer = []
 $stored_ratio = []
 
 class Question16
@@ -20,16 +20,21 @@ class Question16
 
     unless square_list.empty?
       square_list.each do |pp|
+        square_list.delete(pp)
         square_list.reverse.each do |ff|
           if square_area == pp + ff
-            ratio = Math.sqrt(ff).to_f / Math.sqrt(pp).to_f
+            ratio = if ff > pp
+              Math.sqrt(ff).to_f / Math.sqrt(pp).to_f
+            else
+              Math.sqrt(pp).to_f / Math.sqrt(ff).to_f
+            end
+
             unless $stored_ratio.include?(ratio)
-              # $answer << square_area.to_s + ' =  + ' + pp.to_s + '+' + ff.to_s
+              #$answer << square_area.to_s + ' =  + ' + pp.to_s + '+' + ff.to_s
               $stored_ratio << ratio
             end
           end
         end
-        square_list.delete(pp)
       end
     end
   end
@@ -42,5 +47,7 @@ end
 q16 = Question16.new
 q16.main
 
-# $answer.each{|ans| p ans}
+#$answer.each{|ans| p ans}
 p $stored_ratio.size
+
+#$stored_ratio.each{|ratio| p ratio.to_s}
