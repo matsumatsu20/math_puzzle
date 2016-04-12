@@ -10,3 +10,4 @@
 | Question16  | 3.7011ms    | 4.724ms    | 3.455ms    |
 | Question24  | 1378.4449ms | 1396.921ms | 1355.618ms |
 | Question39  | 0.1277ms    | 0.376ms    | 0.074ms    |
+| CodeIQ1     | 0.371144ms  | 1.509320ms | 0.228814ms |
